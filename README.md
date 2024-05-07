@@ -16,7 +16,7 @@
 ## 运行截图
 
 - 运行中 ![运行中](Img/RunImg.png)
-- 游戏结束 ![游戏结束](Img/GameOver.png)
+- 游戏结束 ![游戏结束](Img/GameOverImg.png)
 
 ## 联系方式
 
@@ -45,7 +45,7 @@ This is a small game in my HMCW repository.
 ## Run screenshot
 
 - Running ![Running](Img/RunImg.png)
-- GameOver ![GameOver](Img/GameOver.png)
+- GameOver ![GameOver](Img/GameOverImg.png)
 
 ## Contact Information
 
