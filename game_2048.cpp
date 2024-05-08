@@ -77,7 +77,8 @@ void Game_2048::randomInitPosition()
     // 生成两个随机位置
     int randomPosition1 = QRandomGenerator::global()->bounded(16); // 生成0-15的随机数字
     int randomPosition2 = QRandomGenerator::global()->bounded(16);
-    while (randomPosition2 == randomPosition1) {
+    while (randomPosition2 == randomPosition1)
+    {
         randomPosition2 = QRandomGenerator::global()->bounded(16);
     }
     // 随机两个位置出现方块
