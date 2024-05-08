@@ -481,6 +481,7 @@ void Game_2048::labelMoveRight()
             }
         }
     }
+
     QTimer::singleShot(150, [this,isRandomGenerateLabel]() {
         // 如果没有移动或者合成就不随机生成方块
         if(isRandomGenerateLabel)
@@ -488,6 +489,25 @@ void Game_2048::labelMoveRight()
             this->randomPosition();
         }
     });
+    if(checkGameOver())
+    {
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("游戏");
+        msgBox.setText("很遗憾游戏结束!<br>请问是否再来一次");
+        msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+        msgBox.setDefaultButton(QMessageBox::Ok);
+        msgBox.setTextFormat(Qt::RichText); // 设置文本格式为富文本
+        int ret = msgBox.exec();
+        if(ret == QMessageBox::Ok)
+        {
+            for(qint8 i = 0;i < labelVector.length();i++)
+            {
+                labelVector[i]->setStyleSheet(originalStyleSheet);
+                labelVector[i]->setText("");
+            }
+            randomInitPosition();
+        }
+    }
 }
 
 void Game_2048::keyReleaseEvent(QKeyEvent *event) //键盘松开事件
