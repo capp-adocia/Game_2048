@@ -1,6 +1,6 @@
 # Game_2048
 
-这是我HMCW仓库里的一个小游戏。
+这是我[HMCW仓库](https://github.com/capp-adocia/HMCW)里的一个小游戏。
 
 ## 声明
 
